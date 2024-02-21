@@ -1,0 +1,19 @@
+# This software license, granted by Terracotta Inc. - a Software AG company, is valid for and may only be used
+# by the licensee of this product ("Licensee").
+# Descriptor version: 4
+# ------------------------------------------------------------------------------------
+Date of Issue: 2023-10-16
+Expiration Date: 2024-11-30
+License Type: Commercial
+License Number: FOR INTERNAL USE ONLY
+Licensee: SOFTWARE AG
+Product: BigMemory Max
+Edition: EX
+Capabilities: TMC, WAN, authentication, ehcache, ehcache offheap, search, security, server array offheap
+Max Client Count: 50
+webMethods OEM: true
+ehcache.maxOffHeap: 500G
+terracotta.serverArray.maxDataStorage: 500G
+
+Signature: MCwCFHfme36I4EZQRPTeROBaiJogQgtKAhQPTS1J5MHExH0Su3sswUnRon8DKw==
+
