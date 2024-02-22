@@ -11,7 +11,7 @@ spec:
   containers:
   - name: jnlp
     workingDir: /tmp/jenkins
-	image: docker
+    image: docker
     imagePullPolicy: Always
     restartPolicy: Never
   - name: dind
