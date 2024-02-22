@@ -1,0 +1,332 @@
+Defaulted container "terracotta" out of: terracotta, readiness
+07:50:04.547 [main] INFO org.terracotta.console - terracotta-enterprise 10.15.0.12.2, as of 2024-02-08 at 01:18:56 UTC (Revision 952ec7313a1837ba41ece25fc0030f8a962f8861+jenkins-slave:e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 from HEAD)
+07:50:05.028 [main] INFO org.terracotta.console - Extensions:
+07:50:05.031 [main] INFO org.terracotta.console -
+
+********************************************************************************************************
+** NOTE: Please ensure that your machine has enough available and dedicated RAM to successfully run
+** Terracotta Server and other relevant processes. Not adhering to the resource requirements can result
+** in the machine's Operating System taking drastic corrective actions like terminating the Terracotta
+** Server (via its Out-Of-Memory Killer), performing disk swapping (which appears as "slowness") etc.
+**
+** Failure to abide by the above will result in the deployment being deemed unsupported.
+********************************************************************************************************
+
+
+07:50:05.407 [main] INFO org.terracotta.console - PID is 28
+07:50:07.031 [main] INFO org.terracotta.console - Found configuration directory at: /opt/softwareag/terracotta/config. Other parameters will be ignored
+07:50:07.273 [main] INFO org.terracotta.console - Starting node: terracotta from configuration directory: /opt/softwareag/terracotta/config
+07:50:07.351 [main] INFO org.terracotta.dynamic_config.server.configuration.nomad.persistence.FileConfigStorage - Configuration storage location: /opt/softwareag/terracotta/config/cluster
+07:50:07.432 [main] INFO org.terracotta.dynamic_config.server.configuration.nomad.NomadServerFactory - Using configuration version: 1 with format version: 2 from file: terracotta.1.properties
+07:50:07.474 [main] INFO org.terracotta.dynamic_config.server.configuration.service.NomadServerManager - Bootstrapped nomad system with root: /opt/softwareag/terracotta/config
+07:50:07.499 [main] INFO org.terracotta.dynamic_config.server.configuration.service.DynamicConfigServiceImpl - Activating configuration system on this node with topology: MyCluster ( tc-stripe1:Q0_8wgPSSZGfpOIe1AqMcQ ( terracotta@terracotta-0.terracotta.swag-infra.svc.cluster.local:9410 ) )
+07:50:07.744 [main] INFO org.terracotta.dynamic_config.server.configuration.service.Licensing - Validating license
+07:50:07.761 [main] INFO org.terracotta.dynamic_config.server.configuration.service.Licensing - Type: PerpetualLicense
+Expiration: 2024-11-30
+Capabilities:
+SearchCompute: true
+Caching: true
+Websessions: false
+TCStore: true
+TMC: true
+MultiStripe: true
+Security: true
+OffHeap: 102400
+07:50:07.783 [main] INFO org.terracotta.dynamic_config.server.configuration.service.Licensing - License validated
+07:50:07.835 [main] INFO org.terracotta.dynamic_config.server.configuration.service.Licensing - License installed
+07:50:07.835 [main] INFO org.terracotta.dynamic_config.server.configuration.service.Licensing - License installation successful
+07:50:07.836 [main] INFO org.terracotta.dynamic_config.server.configuration.service.DynamicConfigServiceImpl - Configuration system activated
+07:50:07.948 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting offheap-resources: org.terracotta.offheapresource.OffheapResourceConfigChangeHandler@985696
+07:50:07.960 [main] INFO com.terracottatech.br.config.BackupRestoreConfiguration - Backup target location is : null
+07:50:07.961 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting backup-dir: com.terracottatech.br.config.BackupRestoreConfigChangeHandler@4632cfc
+07:50:07.968 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting client-lease-duration: org.terracotta.lease.service.LeaseConfigChangeHandler@3be4f71
+07:50:07.992 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting data-dirs: org.terracotta.config.data_roots.DataDirConfigChangeHandler@2788d0fe
+07:50:07.993 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting metadata-dir: org.terracotta.config.data_roots.MetaDataDirConfigChangeHandler@49a71302
+07:50:07.997 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting security-dir: com.terracottatech.security.server.config.SecurityDirConfigChangeHandler@66ba7e45
+07:50:07.997 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting audit-log-dir: com.terracottatech.security.server.config.AuditLogDirConfigChangeHandler@70e02081
+07:50:07.998 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting authc: ConfigChangeHandler#accept()
+07:50:07.998 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting ssl-tls: ConfigChangeHandler#accept()
+07:50:07.998 [main] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting whitelist: ConfigChangeHandler#accept()
+07:50:08.008 [main] INFO org.terracotta.dynamic_config.server.configuration.DynamicConfigConfigurationProvider - Startup configuration of the node:
+
+cluster-name=MyCluster
+offheap-resources=main\:1024MB
+stripe.1.node.1.data-dirs=data\:/data/dataroots/terracotta/user-data
+stripe.1.node.1.hostname=terracotta-0.terracotta.swag-infra.svc.cluster.local
+stripe.1.node.1.log-dir=/data/dataroots/terracotta/logs
+stripe.1.node.1.metadata-dir=/data/dataroots/terracotta/metadata
+stripe.1.node.1.name=terracotta
+stripe.1.stripe-name=tc-stripe1
+07:50:08.085 [main] INFO org.terracotta.console - Log file: /data/dataroots/terracotta/logs/terracotta/terracotta.server.log
+2024-02-22 07:50:04,547 INFO - terracotta-enterprise 10.15.0.12.2, as of 2024-02-08 at 01:18:56 UTC (Revision 952ec7313a1837ba41ece25fc0030f8a962f8861+jenkins-slave:e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 from HEAD)
+2024-02-22 07:50:05,028 INFO - Extensions:
+2024-02-22 07:50:05,031 INFO -
+
+********************************************************************************************************
+** NOTE: Please ensure that your machine has enough available and dedicated RAM to successfully run
+** Terracotta Server and other relevant processes. Not adhering to the resource requirements can result
+** in the machine's Operating System taking drastic corrective actions like terminating the Terracotta
+** Server (via its Out-Of-Memory Killer), performing disk swapping (which appears as "slowness") etc.
+**
+** Failure to abide by the above will result in the deployment being deemed unsupported.
+********************************************************************************************************
+
+
+2024-02-22 07:50:05,407 INFO - PID is 28
+2024-02-22 07:50:07,031 INFO - Found configuration directory at: /opt/softwareag/terracotta/config. Other parameters will be ignored
+2024-02-22 07:50:07,273 INFO - Starting node: terracotta from configuration directory: /opt/softwareag/terracotta/config2024-02-22 07:50:07,351 INFO - Configuration storage location: /opt/softwareag/terracotta/config/cluster
+2024-02-22 07:50:07,432 INFO - Using configuration version: 1 with format version: 2 from file: terracotta.1.properties
+2024-02-22 07:50:07,474 INFO - Bootstrapped nomad system with root: /opt/softwareag/terracotta/config
+2024-02-22 07:50:07,499 INFO - Activating configuration system on this node with topology: MyCluster ( tc-stripe1:Q0_8wgPSSZGfpOIe1AqMcQ ( terracotta@terracotta-0.terracotta.swag-infra.svc.cluster.local:9410 ) )
+2024-02-22 07:50:07,744 INFO - Validating license
+2024-02-22 07:50:07,761 INFO - Type: PerpetualLicense
+Expiration: 2024-11-30
+Capabilities:
+SearchCompute: true
+Caching: true
+Websessions: false
+TCStore: true
+TMC: true
+MultiStripe: true
+Security: true
+OffHeap: 102400
+2024-02-22 07:50:07,783 INFO - License validated
+2024-02-22 07:50:07,835 INFO - License installed
+2024-02-22 07:50:07,835 INFO - License installation successful
+2024-02-22 07:50:07,836 INFO - Configuration system activated
+2024-02-22 07:50:07,948 INFO - Registered dynamic configuration change handler for setting offheap-resources: org.terracotta.offheapresource.OffheapResourceConfigChangeHandler@985696
+2024-02-22 07:50:07,960 INFO - Backup target location is : null
+2024-02-22 07:50:07,961 INFO - Registered dynamic configuration change handler for setting backup-dir: com.terracottatech.br.config.BackupRestoreConfigChangeHandler@4632cfc
+2024-02-22 07:50:07,968 INFO - Registered dynamic configuration change handler for setting client-lease-duration: org.terracotta.lease.service.LeaseConfigChangeHandler@3be4f71
+2024-02-22 07:50:07,992 INFO - Registered dynamic configuration change handler for setting data-dirs: org.terracotta.config.data_roots.DataDirConfigChangeHandler@2788d0fe
+2024-02-22 07:50:07,993 INFO - Registered dynamic configuration change handler for setting metadata-dir: org.terracotta.config.data_roots.MetaDataDirConfigChangeHandler@49a71302
+2024-02-22 07:50:07,997 INFO - Registered dynamic configuration change handler for setting security-dir: com.terracottatech.security.server.config.SecurityDirConfigChangeHandler@66ba7e45
+2024-02-22 07:50:07,997 INFO - Registered dynamic configuration change handler for setting audit-log-dir: com.terracottatech.security.server.config.AuditLogDirConfigChangeHandler@70e02081
+2024-02-22 07:50:07,998 INFO - Registered dynamic configuration change handler for setting authc: ConfigChangeHandler#accept()
+2024-02-22 07:50:07,998 INFO - Registered dynamic configuration change handler for setting ssl-tls: ConfigChangeHandler#accept()
+2024-02-22 07:50:07,998 INFO - Registered dynamic configuration change handler for setting whitelist: ConfigChangeHandler#accept()
+2024-02-22 07:50:08,008 INFO - Startup configuration of the node:
+
+cluster-name=MyCluster
+offheap-resources=main\:1024MB
+stripe.1.node.1.data-dirs=data\:/data/dataroots/terracotta/user-data
+stripe.1.node.1.hostname=terracotta-0.terracotta.swag-infra.svc.cluster.local
+stripe.1.node.1.log-dir=/data/dataroots/terracotta/logs
+stripe.1.node.1.metadata-dir=/data/dataroots/terracotta/metadata
+stripe.1.node.1.name=terracotta
+stripe.1.stripe-name=tc-stripe1
+2024-02-22 07:50:08,085 INFO - Log file: /data/dataroots/terracotta/logs/terracotta/terracotta.server.log
+07:50:08.124 [main] INFO com.tc.l2.logging.TCLogbackLogging - All Java System Properties for this Terracotta instance:
+========================================================================
+JVM arguments: [-XX:MaxDirectMemorySize=1048576g, -Xms256m, -Xmx2049m, -XX:+HeapDumpOnOutOfMemoryError, -Dtc.install-root=/opt/softwareag/terracotta/server]
+awt.toolkit                            : sun.awt.X11.XToolkit
+file.encoding                          : UTF-8
+file.separator                         : /
+java.awt.graphicsenv                   : sun.awt.X11GraphicsEnvironment
+java.awt.printerjob                    : sun.print.PSPrinterJob
+java.class.path                        : /opt/softwareag/terracotta/server/lib/tc.jar
+java.class.version                     : 55.0
+java.home                              : /opt/softwareag/jvm/jvm
+java.io.tmpdir                         : /tmp
+java.library.path                      : /opt/softwareag/jvm/jvm/lib/server:/opt/softwareag/jvm/jvm/lib:/opt/softwareag/jvm/jvm/../lib:/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+java.runtime.name                      : OpenJDK Runtime Environment
+java.runtime.version                   : 11.0.21+9-LTS
+java.specification.maintenance.version : 2
+java.specification.name                : Java Platform API Specification
+java.specification.vendor              : Oracle Corporation
+java.specification.version             : 11
+java.vendor                            : Azul Systems, Inc.
+java.vendor.url                        : http://www.azul.com/
+java.vendor.url.bug                    : http://www.azul.com/support/
+java.vendor.version                    : Zulu11.68+18-SA
+java.version                           : 11.0.21
+java.version.date                      : 2023-10-17
+java.vm.compressedOopsMode             : Zero based
+java.vm.info                           : mixed mode
+java.vm.name                           : OpenJDK 64-Bit Server VM
+java.vm.specification.name             : Java Virtual Machine Specification
+java.vm.specification.vendor           : Oracle Corporation
+java.vm.specification.version          : 11
+java.vm.vendor                         : Azul Systems, Inc.
+java.vm.version                        : 11.0.21+9-LTS
+jdk.debug                              : release
+jdk.vendor.version                     : Zulu11.68+18-SA
+line.separator                         :
+
+os.arch                                : amd64
+os.name                                : Linux
+os.version                             : 5.15.133.1-microsoft-standard-WSL2
+path.separator                         : :
+sun.arch.data.model                    : 64
+sun.boot.library.path                  : /opt/softwareag/jvm/jvm/lib
+sun.cpu.endian                         : little
+sun.cpu.isalist                        :
+sun.io.unicode.encoding                : UnicodeLittle
+sun.java.command                       : /opt/softwareag/terracotta/server/lib/tc.jar -f /configs/tc-config.cfg -n terracotta
+sun.java.launcher                      : SUN_STANDARD
+sun.jnu.encoding                       : UTF-8
+sun.management.compiler                : HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level                     : unknown
+tc.install-root                        : /opt/softwareag/terracotta/server
+terracotta.cloud.logging.cluster       : MyCluster
+terracotta.cloud.logging.node          : terracotta
+terracotta.cloud.logging.stripe        : tc-stripe1
+user.country                           : US
+user.dir                               : /opt/softwareag/terracotta/server
+user.home                              : /opt/softwareag
+user.language                          : en
+user.name                              : sagadmin
+user.timezone                          : GMT
+========================================================================
+2024-02-22 07:50:08,134 INFO - Available Max Runtime Memory: 2050MB
+07:50:08.134 [Server Startup Thread] INFO org.terracotta.console - Available Max Runtime Memory: 2050MB
+07:50:08.369 [Server Startup Thread] INFO com.tc.objectserver.impl.DistributedObjectServer - Creating server nodeID: NodeID[terracotta-0.terracotta.swag-infra.svc.cluster.local:9410]
+07:50:08.407 [Server Startup Thread] INFO com.terracottatech.br.BackupServiceProvider - Initializing backup and restore service. Backup Location is null
+07:50:08.429 [Server Startup Thread] INFO com.terracottatech.br.backup.diagnostic.BackupDiagnostic - Registered Backup Diagnostic to receive call from Diagnostic Port.
+07:50:08.429 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.br.BackupServiceProvider@730c647d
+07:50:08.437 [Server Startup Thread] INFO org.terracotta.lease.service.LeaseServiceProvider - Initializing LeaseServiceProvider with org.terracotta.lease.service.config.LeaseConfiguration@5936dbf7
+07:50:08.443 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing org.terracotta.lease.service.LeaseServiceProvider@406d333c
+07:50:08.569 [Server Startup Thread] INFO com.terracottatech.store.server.state.DatasetEntityStateServiceProvider - Initializing DatasetEntityStateServiceProvider.
+07:50:08.569 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.store.server.state.DatasetEntityStateServiceProvider@79c742ba
+07:50:08.570 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing org.terracotta.client.message.tracker.OOOMessageHandlerProvider@2c052d98
+07:50:08.594 [Server Startup Thread] INFO com.terracottatech.persistence.frs.FRSPersistenceServiceProvider - Implicit configuration of FRSPersistenceServiceProvider resulted in 'platform' as data directory
+07:50:08.595 [Server Startup Thread] INFO com.terracottatech.persistence.frs.FRSPersistenceServiceProvider - Initializing platform data directory: /data/dataroots/terracotta/metadata/terracotta/platform-data
+07:50:08.634 [Server Startup Thread] INFO com.terracottatech.frs.io.IOManager - opening with STREAM access method
+07:50:08.654 [Server Startup Thread] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - Reporting fsync latencies every 300 seconds
+07:50:08.734 [Server Startup Thread] INFO com.terracottatech.frs.io.IOManager - opening with STREAM access method
+07:50:08.736 [Server Startup Thread] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - Reporting fsync latencies every 300 seconds
+07:50:08.849 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Starting recovery for /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData
+07:50:08.888 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 0%
+07:50:08.902 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 10%
+07:50:08.908 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 20%
+07:50:08.913 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 30%
+07:50:08.925 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 40%
+07:50:08.931 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 50%
+07:50:08.934 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 60%
+07:50:08.939 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 70%
+07:50:08.944 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 80%
+07:50:08.963 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 90%
+07:50:08.975 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 100%
+07:50:09.122 [Server Startup Thread] INFO com.terracottatech.frs.compaction.Compactor - using com.terracottatech.frs.compaction.SizeBasedCompactionPolicy compaction policy
+07:50:09.137 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Starting recovery for /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData
+07:50:09.142 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 0%
+07:50:09.161 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 10%
+07:50:09.172 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 20%
+07:50:09.173 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 30%
+07:50:09.176 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 40%
+07:50:09.183 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 50%
+07:50:09.187 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 60%
+07:50:09.212 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 70%
+07:50:09.222 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 80%
+07:50:09.232 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 90%
+07:50:09.243 [Server Startup Thread] INFO com.terracottatech.frs.recovery.RecoveryManager - Recovery progress 100%
+07:50:09.285 [Server Startup Thread] INFO com.terracottatech.frs.compaction.Compactor - using com.terracottatech.frs.compaction.SizeBasedCompactionPolicy compaction policy
+07:50:09.286 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.persistence.frs.FRSPersistenceServiceProvider@5af12f34
+07:50:09.298 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.store.server.usage.DiskUsageServiceProvider@47c6755a
+07:50:09.303 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing org.terracotta.diagnostic.server.extensions.DiagnosticExtensionsServiceProvider@a203b10
+07:50:09.352 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing org.terracotta.management.service.monitoring.MonitoringServiceProvider@3dbcb911
+07:50:09.354 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.ehcache.clustered.server.state.EnterpriseEhcacheStateServiceProvider@4a875f6a
+07:50:09.356 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing org.terracotta.platform.ServerInfoProvider@4f2315f0
+07:50:09.363 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.impl.ScalingProvider@5061437e
+07:50:09.369 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.ehcache.clustered.server.services.frs.EhcacheFRSServiceProvider@766ea51f
+07:50:09.372 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.store.server.execution.ExecutionServiceProvider@408b139d
+07:50:09.379 [Server Startup Thread] INFO com.terracottatech.store.server.storage.StorageFactoryProvider - Initializing StorageFactoryProvider
+07:50:09.418 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.store.server.storage.StorageFactoryProvider@29513033
+07:50:09.434 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.licensing.services.LicenseServiceProvider@7a83172d
+07:50:09.437 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.store.server.usage.ResourceLoggingServiceProvider@17f701db
+07:50:09.438 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.ehcache.clustered.server.services.pool.ResourcePoolManagerServiceProvider@8fd9773
+07:50:09.443 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.tc.util.VersionCompatibilityEnterpriseServiceProvider@bd08553
+07:50:09.443 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+07:50:09.446 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.impl.tracker.EntityTrackerProvider@38261a7
+07:50:09.460 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+07:50:09.484 [Server Startup Thread] INFO org.terracotta.diagnostic.server.DefaultDiagnosticServices - Registered MBean with name: DiagnosticRequestHandler
+07:50:09.486 [Server Startup Thread] INFO org.terracotta.diagnostic.server.DefaultDiagnosticServices - Registered Diagnostic Service: org.terracotta.nomad.server.NomadServer
+07:50:09.486 [Server Startup Thread] INFO org.terracotta.diagnostic.server.DefaultDiagnosticServices - Registered Diagnostic Service: org.terracotta.dynamic_config.api.service.DynamicConfigService
+07:50:09.486 [Server Startup Thread] INFO org.terracotta.diagnostic.server.DefaultDiagnosticServices - Registered Diagnostic Service: org.terracotta.dynamic_config.api.service.TopologyService
+07:50:09.486 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing org.terracotta.diagnostic.server.DiagnosticServiceProvider@51ffdd27
+07:50:09.486 [Server Startup Thread] INFO com.terracottatech.shutdown.ShutdownServiceProvider - Initializing shutdown service.
+07:50:09.503 [Server Startup Thread] INFO com.terracottatech.shutdown.diagnostic.ShutdownDiagnostic - Registered Shutdown Diagnostic to receive call from Diagnostic Port.
+07:50:09.504 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing com.terracottatech.shutdown.ShutdownServiceProvider@2dea1db
+07:50:09.509 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting client-reconnect-window: org.terracotta.dynamic_config.server.service.handler.ClientReconnectWindowConfigChangeHandler@6599f4c3
+07:50:09.510 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting log-dir: org.terracotta.dynamic_config.server.service.handler.NodeLogDirChangeHandler@10514d65
+07:50:09.510 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting failover-priority: ConfigChangeHandler#accept()
+07:50:09.511 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting public-hostname: ConfigChangeHandler#accept()
+07:50:09.511 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting public-port: ConfigChangeHandler#accept()
+07:50:09.511 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting cluster-name: ConfigChangeHandler#accept()
+07:50:09.511 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting lock-context: ConfigChangeHandler#accept()
+07:50:09.517 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting logger-overrides: org.terracotta.dynamic_config.server.service.handler.LoggerOverrideConfigChangeHandler@6cdfb713
+07:50:09.521 [Server Startup Thread] INFO org.terracotta.dynamic_config.server.configuration.service.ConfigChangeHandlerManagerImpl - Registered dynamic configuration change handler for setting tc-properties: org.terracotta.dynamic_config.server.api.SelectingConfigChangeHandler@2cc1e1d4
+07:50:09.531 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Initializing org.terracotta.dynamic_config.server.service.DynamicConfigServiceProvider@e98b511
+07:50:09.538 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Registering implementation-provided service com.tc.services.PlatformServiceProvider@3f2b3407
+07:50:09.540 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Registering implementation-provided service com.tc.services.EntityMessengerProvider@31d74fcb
+07:50:09.562 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Registering implementation-provided service com.tc.services.LocalMonitoringProducer@3db0c166
+07:50:09.651 [Server Startup Thread] INFO com.tc.net.core.TCWorkerCommManager - Creating 10 worker comm threads for terracotta - L2_L1
+07:50:10.046 [Server Startup Thread] INFO com.tc.services.TerracottaServiceProviderRegistryImpl - Registering implementation-provided service com.tc.services.CommunicatorService@76a0dacb
+07:50:10.737 [Server Startup Thread] INFO com.tc.objectserver.impl.DistributedObjectServer - This L2 Node ID = NodeID[terracotta-0.terracotta.swag-infra.svc.cluster.local:9410]
+07:50:10.737 [Server Startup Thread] INFO com.tc.l2.state.StateManagerImpl - Starting election initial state:State[ ACTIVE-COORDINATOR ]
+07:50:10.773 [Server Startup Thread] INFO com.tc.server.TCServer - Server started as terracotta
+07:50:10.787 [terracotta - WorkerThread(l2_election_handler_stage, 0)] INFO com.tc.l2.state.ElectionManagerImpl - Election Started : Enrollment [ NodeID[terracotta-0.terracotta.swag-infra.svc.cluster.local:9410], isNew = false, weights = 0,0,0,5,1,1,0,0,-1594389919197928403,0 ]
+07:50:10.788 [terracotta - WorkerThread(l2_election_handler_stage, 0)] INFO com.tc.l2.state.ElectionManagerImpl - Election took 0 sec. ending in State[ Election-In-Progress ]
+07:50:10.788 [terracotta - WorkerThread(l2_election_handler_stage, 0)] INFO com.tc.l2.state.ElectionManagerImpl - Election Complete : [Enrollment [ NodeID[terracotta-0.terracotta.swag-infra.svc.cluster.local:9410], isNew = false, weights = 0,0,0,5,1,1,0,0,-1594389919197928403,0 ]] : State[ Election-Complete ]
+07:50:10.824 [terracotta - WorkerThread(l2_election_handler_stage, 0)] INFO com.tc.l2.state.ElectionManagerImpl - Declared as Winner: Winner is : Enrollment [ NodeID[terracotta-0.terracotta.swag-infra.svc.cluster.local:9410], isNew = false, weights = 0,0,0,5,1,1,0,0,-1594389919197928403,0 ]
+07:50:11.440 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='org.terracotta.lease.LeaseAcquirer', entityName='SystemLeaseAcquirer'}
+07:50:11.443 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO org.terracotta.lease.service.LeaseServiceProvider - Creating LeaseService
+07:50:11.480 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='com.terracottatech.br.entity.BackupRestoreEntity', entityName='backup-and-restore-entity'}
+07:50:11.482 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.terracottatech.br.entity.BackupRestoreServerEntity - Initializing backup server entity.
+07:50:11.500 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='org.terracotta.dynamic_config.entity.topology.client.DynamicTopologyEntity', entityName='dynamic-config-topology-entity'}
+07:50:11.567 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='org.terracotta.management.entity.nms.agent.client.NmsAgentEntity', entityName='NmsAgent'}
+07:50:11.571 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO org.terracotta.management.service.monitoring.MonitoringServiceProvider - [4] getService(ClientMonitoringService)
+07:50:11.643 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='org.terracotta.catalog.SystemCatalog', entityName='staticCataloger'}
+07:50:11.664 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='com.terracottatech.shutdown.entity.ShutdownEntity', entityName='shutdown-entity'}
+07:50:11.665 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.terracottatech.shutdown.entity.ShutdownServerEntity - Initializing Shutdown server entity.
+07:50:11.685 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.terracottatech.shutdown.service.ShutdownServiceImpl - Registered Shutdown Capable Service Tcstore
+07:50:11.697 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='com.terracottatech.licensing.client.LicenseEntity', entityName='license-entity'}07:50:11.759 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.terracottatech.licensing.server.LicenseActiveEntity - License expiry check is scheduled after 969 min(s).
+07:50:11.796 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='com.terracottatech.impl.scalerentity.ScalerEntity', entityName='scaler-entity'}
+07:50:11.861 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='org.terracotta.dynamic_config.entity.management.server.ManagementEntityServerService', entityName='dynamic-config-management-entity'}
+07:50:11.862 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO org.terracotta.management.service.monitoring.MonitoringServiceProvider - [9] getService(EntityManagementRegistry) isActive=true, config=EntityManagementRegistryConfiguration
+07:50:11.878 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO org.terracotta.management.service.monitoring.DefaultEntityMonitoringService - [9] Initializing entity monitoring service
+07:50:11.879 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO org.terracotta.management.service.monitoring.DefaultEntityManagementRegistry - [9] Updating active entity management registry
+07:50:11.884 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO org.terracotta.dynamic_config.entity.management.server.ManagementCommonEntity - Activated management and monitoring for dynamic configuration
+07:50:11.888 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.entity.ManagedEntityImpl - loadExisting entity: EntityID{className='org.terracotta.nomad.entity.client.NomadEntity', entityName='nomad-entity'}
+07:50:11.961 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.l2.ha.ClusterState - setting next available cid: 6
+07:50:11.967 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO com.tc.objectserver.impl.ConnectionIDFactoryImpl - activating connectionid factory stripe:StripeID[7185c88647ed4171b38ea37100f8173c] next id: 6
+2024-02-22 07:50:12,043 INFO - Terracotta Server instance has started up as ACTIVE node on all interfaces (address:/0.0.0.0 port:9410) successfully, and is now ready for work.
+07:50:12.043 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO org.terracotta.console - Terracotta Server instance has started up as ACTIVE node on all interfaces (address:/0.0.0.0 port:9410) successfully, and is now ready for work.
+2024-02-22 07:50:12,043 INFO - Moved to State[ ACTIVE-COORDINATOR ]
+07:50:12.043 [terracotta - WorkerThread(l2_state_change_stage, 0)] INFO org.terracotta.console - Moved to State[ ACTIVE-COORDINATOR ]
+07:55:08.680 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (10 @ 65536ns) [0, 0, 1, 0, 2, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+07:55:08.743 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (2 @ 65536ns) [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+07:55:09.461 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+07:55:09.462 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+08:00:08.681 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:00:08.744 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:00:09.463 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+08:00:09.464 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+08:05:08.681 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:05:08.744 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:05:09.465 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+08:05:09.467 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+08:10:08.682 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:10:08.745 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:10:09.467 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+08:10:09.468 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+08:15:08.683 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:15:08.745 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (1 @ 65536ns) [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:15:09.468 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+08:15:09.469 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+08:20:08.683 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (1 @ 65536ns) [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:20:08.745 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:20:09.469 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+08:20:09.471 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+08:25:08.684 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:25:08.746 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:25:09.471 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+08:25:09.471 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+08:30:08.684 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:30:08.746 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (1 @ 65536ns) [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:30:09.472 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+08:30:09.472 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
+08:35:08.684 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/entityData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:35:08.746 [FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latency watcher] INFO com.terracottatech.frs.io.nio.NIOStreamImpl - FRS Sync: /data/dataroots/terracotta/metadata/terracotta/platform-data/transactionsData latencies: (1 @ 65536ns) [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+08:35:09.472 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: OFFHEAP RESOURCE - identifier:main, used: 0B, total: 1024MB
+08:35:09.473 [resource periodic logging service] INFO com.terracottatech.store.server.usage.ResourceLoggingService - Resource usage: DISK RESOURCE - identifiers:[data, platform], used: 62GB, total: 1006GB
